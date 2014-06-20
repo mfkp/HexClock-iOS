@@ -19,10 +19,15 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
-    UISnapBehavior *snap = [[UISnapBehavior alloc] initWithItem:hexText snapToPoint:self.view.center];
-    snap.damping = 0.2;
-    [animator addBehavior:snap];
+    [UIView animateWithDuration:1.0
+                          delay:0.0
+         usingSpringWithDamping:0.2
+          initialSpringVelocity:0.0
+                        options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionAllowUserInteraction
+                     animations:^() {
+                         hexText.center = self.view.center;
+                     }
+                     completion:nil];
 
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerTick:) userInfo:nil repeats:YES];
     [self timerTick:timer];
