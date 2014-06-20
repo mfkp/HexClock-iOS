@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27FD009F195412B700EC9595 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FD009E195412B700EC9595 /* Foundation.framework */; };
+		27FD00A1195412B700EC9595 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FD00A0195412B700EC9595 /* CoreGraphics.framework */; };
+		27FD00A3195412B700EC9595 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FD00A2195412B700EC9595 /* UIKit.framework */; };
+		27FD00A9195412B700EC9595 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27FD00A7195412B700EC9595 /* InfoPlist.strings */; };
+		27FD00AB195412B700EC9595 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FD00AA195412B700EC9595 /* main.m */; };
+		27FD00AF195412B700EC9595 /* VMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FD00AE195412B700EC9595 /* VMAppDelegate.m */; };
+		27FD00B2195412B700EC9595 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27FD00B0195412B700EC9595 /* Main_iPhone.storyboard */; };
+		27FD00B5195412B700EC9595 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27FD00B3195412B700EC9595 /* Main_iPad.storyboard */; };
+		27FD00B8195412B700EC9595 /* VMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FD00B7195412B700EC9595 /* VMViewController.m */; };
+		27FD00BA195412B700EC9595 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27FD00B9195412B700EC9595 /* Images.xcassets */; };
+		27FD00C1195412B700EC9595 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FD00C0195412B700EC9595 /* XCTest.framework */; };
+		27FD00C2195412B700EC9595 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FD009E195412B700EC9595 /* Foundation.framework */; };
+		27FD00C3195412B700EC9595 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FD00A2195412B700EC9595 /* UIKit.framework */; };
+		27FD00CB195412B700EC9595 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27FD00C9195412B700EC9595 /* InfoPlist.strings */; };
+		27FD00CD195412B700EC9595 /* HexClockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FD00CC195412B700EC9595 /* HexClockTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		27FD00C4195412B700EC9595 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27FD0093195412B600EC9595 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27FD009A195412B700EC9595;
+			remoteInfo = HexClock;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		27FD009B195412B700EC9595 /* HexClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HexClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27FD009E195412B700EC9595 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		27FD00A0195412B700EC9595 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		27FD00A2195412B700EC9595 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		27FD00A6195412B700EC9595 /* HexClock-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HexClock-Info.plist"; sourceTree = "<group>"; };
+		27FD00A8195412B700EC9595 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		27FD00AA195412B700EC9595 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		27FD00AC195412B700EC9595 /* HexClock-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HexClock-Prefix.pch"; sourceTree = "<group>"; };
+		27FD00AD195412B700EC9595 /* VMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMAppDelegate.h; sourceTree = "<group>"; };
+		27FD00AE195412B700EC9595 /* VMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMAppDelegate.m; sourceTree = "<group>"; };
+		27FD00B1195412B700EC9595 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		27FD00B4195412B700EC9595 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		27FD00B6195412B700EC9595 /* VMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMViewController.h; sourceTree = "<group>"; };
+		27FD00B7195412B700EC9595 /* VMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMViewController.m; sourceTree = "<group>"; };
+		27FD00B9195412B700EC9595 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		27FD00BF195412B700EC9595 /* HexClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HexClockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27FD00C0195412B700EC9595 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		27FD00C8195412B700EC9595 /* HexClockTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HexClockTests-Info.plist"; sourceTree = "<group>"; };
+		27FD00CA195412B700EC9595 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		27FD00CC195412B700EC9595 /* HexClockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HexClockTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27FD0098195412B700EC9595 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27FD00A1195412B700EC9595 /* CoreGraphics.framework in Frameworks */,
+				27FD00A3195412B700EC9595 /* UIKit.framework in Frameworks */,
+				27FD009F195412B700EC9595 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27FD00BC195412B700EC9595 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27FD00C1195412B700EC9595 /* XCTest.framework in Frameworks */,
+				27FD00C3195412B700EC9595 /* UIKit.framework in Frameworks */,
+				27FD00C2195412B700EC9595 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27FD0092195412B600EC9595 = {
+			isa = PBXGroup;
+			children = (
+				27FD00A4195412B700EC9595 /* HexClock */,
+				27FD00C6195412B700EC9595 /* HexClockTests */,
+				27FD009D195412B700EC9595 /* Frameworks */,
+				27FD009C195412B700EC9595 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		27FD009C195412B700EC9595 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27FD009B195412B700EC9595 /* HexClock.app */,
+				27FD00BF195412B700EC9595 /* HexClockTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27FD009D195412B700EC9595 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27FD009E195412B700EC9595 /* Foundation.framework */,
+				27FD00A0195412B700EC9595 /* CoreGraphics.framework */,
+				27FD00A2195412B700EC9595 /* UIKit.framework */,
+				27FD00C0195412B700EC9595 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		27FD00A4195412B700EC9595 /* HexClock */ = {
+			isa = PBXGroup;
+			children = (
+				27FD00AD195412B700EC9595 /* VMAppDelegate.h */,
+				27FD00AE195412B700EC9595 /* VMAppDelegate.m */,
+				27FD00B0195412B700EC9595 /* Main_iPhone.storyboard */,
+				27FD00B3195412B700EC9595 /* Main_iPad.storyboard */,
+				27FD00B6195412B700EC9595 /* VMViewController.h */,
+				27FD00B7195412B700EC9595 /* VMViewController.m */,
+				27FD00B9195412B700EC9595 /* Images.xcassets */,
+				27FD00A5195412B700EC9595 /* Supporting Files */,
+			);
+			path = HexClock;
+			sourceTree = "<group>";
+		};
+		27FD00A5195412B700EC9595 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				27FD00A6195412B700EC9595 /* HexClock-Info.plist */,
+				27FD00A7195412B700EC9595 /* InfoPlist.strings */,
+				27FD00AA195412B700EC9595 /* main.m */,
+				27FD00AC195412B700EC9595 /* HexClock-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		27FD00C6195412B700EC9595 /* HexClockTests */ = {
+			isa = PBXGroup;
+			children = (
+				27FD00CC195412B700EC9595 /* HexClockTests.m */,
+				27FD00C7195412B700EC9595 /* Supporting Files */,
+			);
+			path = HexClockTests;
+			sourceTree = "<group>";
+		};
+		27FD00C7195412B700EC9595 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				27FD00C8195412B700EC9595 /* HexClockTests-Info.plist */,
+				27FD00C9195412B700EC9595 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		27FD009A195412B700EC9595 /* HexClock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27FD00D0195412B700EC9595 /* Build configuration list for PBXNativeTarget "HexClock" */;
+			buildPhases = (
+				27FD0097195412B700EC9595 /* Sources */,
+				27FD0098195412B700EC9595 /* Frameworks */,
+				27FD0099195412B700EC9595 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HexClock;
+			productName = HexClock;
+			productReference = 27FD009B195412B700EC9595 /* HexClock.app */;
+			productType = "com.apple.product-type.application";
+		};
+		27FD00BE195412B700EC9595 /* HexClockTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27FD00D3195412B700EC9595 /* Build configuration list for PBXNativeTarget "HexClockTests" */;
+			buildPhases = (
+				27FD00BB195412B700EC9595 /* Sources */,
+				27FD00BC195412B700EC9595 /* Frameworks */,
+				27FD00BD195412B700EC9595 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27FD00C5195412B700EC9595 /* PBXTargetDependency */,
+			);
+			name = HexClockTests;
+			productName = HexClockTests;
+			productReference = 27FD00BF195412B700EC9595 /* HexClockTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		27FD0093195412B600EC9595 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = VM;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = VibraMedia;
+				TargetAttributes = {
+					27FD00BE195412B700EC9595 = {
+						TestTargetID = 27FD009A195412B700EC9595;
+					};
+				};
+			};
+			buildConfigurationList = 27FD0096195412B600EC9595 /* Build configuration list for PBXProject "HexClock" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 27FD0092195412B600EC9595;
+			productRefGroup = 27FD009C195412B700EC9595 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				27FD009A195412B700EC9595 /* HexClock */,
+				27FD00BE195412B700EC9595 /* HexClockTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		27FD0099195412B700EC9595 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27FD00B5195412B700EC9595 /* Main_iPad.storyboard in Resources */,
+				27FD00BA195412B700EC9595 /* Images.xcassets in Resources */,
+				27FD00B2195412B700EC9595 /* Main_iPhone.storyboard in Resources */,
+				27FD00A9195412B700EC9595 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27FD00BD195412B700EC9595 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27FD00CB195412B700EC9595 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27FD0097195412B700EC9595 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27FD00AB195412B700EC9595 /* main.m in Sources */,
+				27FD00B8195412B700EC9595 /* VMViewController.m in Sources */,
+				27FD00AF195412B700EC9595 /* VMAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27FD00BB195412B700EC9595 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27FD00CD195412B700EC9595 /* HexClockTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		27FD00C5195412B700EC9595 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27FD009A195412B700EC9595 /* HexClock */;
+			targetProxy = 27FD00C4195412B700EC9595 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		27FD00A7195412B700EC9595 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27FD00A8195412B700EC9595 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		27FD00B0195412B700EC9595 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27FD00B1195412B700EC9595 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		27FD00B3195412B700EC9595 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27FD00B4195412B700EC9595 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		27FD00C9195412B700EC9595 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27FD00CA195412B700EC9595 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		27FD00CE195412B700EC9595 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		27FD00CF195412B700EC9595 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		27FD00D1195412B700EC9595 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HexClock/HexClock-Prefix.pch";
+				INFOPLIST_FILE = "HexClock/HexClock-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		27FD00D2195412B700EC9595 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HexClock/HexClock-Prefix.pch";
+				INFOPLIST_FILE = "HexClock/HexClock-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		27FD00D4195412B700EC9595 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HexClock.app/HexClock";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HexClock/HexClock-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HexClockTests/HexClockTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		27FD00D5195412B700EC9595 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HexClock.app/HexClock";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HexClock/HexClock-Prefix.pch";
+				INFOPLIST_FILE = "HexClockTests/HexClockTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27FD0096195412B600EC9595 /* Build configuration list for PBXProject "HexClock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27FD00CE195412B700EC9595 /* Debug */,
+				27FD00CF195412B700EC9595 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27FD00D0195412B700EC9595 /* Build configuration list for PBXNativeTarget "HexClock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27FD00D1195412B700EC9595 /* Debug */,
+				27FD00D2195412B700EC9595 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		27FD00D3195412B700EC9595 /* Build configuration list for PBXNativeTarget "HexClockTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27FD00D4195412B700EC9595 /* Debug */,
+				27FD00D5195412B700EC9595 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 27FD0093195412B600EC9595 /* Project object */;
+}
