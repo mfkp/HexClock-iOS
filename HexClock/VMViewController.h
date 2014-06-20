@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface VMViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextView *hexText;
+@property (nonatomic) UIDynamicAnimator *animator;
 
 @end

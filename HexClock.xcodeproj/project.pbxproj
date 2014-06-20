@@ -22,6 +22,7 @@
 		27FD00C3195412B700EC9595 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FD00A2195412B700EC9595 /* UIKit.framework */; };
 		27FD00CB195412B700EC9595 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27FD00C9195412B700EC9595 /* InfoPlist.strings */; };
 		27FD00CD195412B700EC9595 /* HexClockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FD00CC195412B700EC9595 /* HexClockTests.m */; };
+		27FD00DB1954184300EC9595 /* UIColor+Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FD00DA1954184300EC9595 /* UIColor+Expanded.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		27FD00C8195412B700EC9595 /* HexClockTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HexClockTests-Info.plist"; sourceTree = "<group>"; };
 		27FD00CA195412B700EC9595 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		27FD00CC195412B700EC9595 /* HexClockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HexClockTests.m; sourceTree = "<group>"; };
+		27FD00D91954184300EC9595 /* UIColor+Expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Expanded.h"; sourceTree = "<group>"; };
+		27FD00DA1954184300EC9595 /* UIColor+Expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Expanded.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,8 @@
 				27FD00B7195412B700EC9595 /* VMViewController.m */,
 				27FD00B9195412B700EC9595 /* Images.xcassets */,
 				27FD00A5195412B700EC9595 /* Supporting Files */,
+				27FD00D91954184300EC9595 /* UIColor+Expanded.h */,
+				27FD00DA1954184300EC9595 /* UIColor+Expanded.m */,
 			);
 			path = HexClock;
 			sourceTree = "<group>";
@@ -256,6 +261,7 @@
 			files = (
 				27FD00AB195412B700EC9595 /* main.m in Sources */,
 				27FD00B8195412B700EC9595 /* VMViewController.m in Sources */,
+				27FD00DB1954184300EC9595 /* UIColor+Expanded.m in Sources */,
 				27FD00AF195412B700EC9595 /* VMAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,6 +400,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HexClock/HexClock-Prefix.pch";
 				INFOPLIST_FILE = "HexClock/HexClock-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -407,6 +414,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HexClock/HexClock-Prefix.pch";
 				INFOPLIST_FILE = "HexClock/HexClock-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
