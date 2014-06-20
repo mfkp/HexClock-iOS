@@ -27,8 +27,6 @@
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerTick:) userInfo:nil repeats:YES];
     [self timerTick:timer];
     
-//    [self performSelector:@selector(moveUp) withObject:nil afterDelay:3.0];
-    
     UIPanGestureRecognizer *recognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     [hexText addGestureRecognizer:recognizer];
 
@@ -46,32 +44,6 @@
     NSString *hexString = [@"#" stringByAppendingString:newDateString];
     [self.view setBackgroundColor:[UIColor colorWithHexString:hexString]];
     hexText.text = hexString;
-}
-
-- (void)moveUp {
-    [UIView animateWithDuration:2.0
-                          delay:0.0
-                        options: UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionAllowUserInteraction
-                     animations:^{
-                         CGRect frame = hexText.frame;
-                         frame.origin.y -= 15.0;
-                         hexText.frame = frame;
-                     } completion:^(BOOL finished) {
-                         [self moveDown];
-                     }];
-}
-
-- (void)moveDown{
-    [UIView animateWithDuration:2.0
-                          delay:0.0
-                        options: UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionAllowUserInteraction
-                     animations:^{
-                         CGRect frame = hexText.frame;
-                         frame.origin.y += 15.0;
-                         hexText.frame = frame;
-                     } completion:^(BOOL finished) {
-                         [self moveUp];
-                     }];
 }
 
 - (IBAction)handlePan:(UIPanGestureRecognizer *)recognizer {
