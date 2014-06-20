@@ -8,6 +8,7 @@
 
 #import "VMViewController.h"
 #import "UIColor+Expanded.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation VMViewController
 
@@ -22,11 +23,19 @@
     UISnapBehavior *snap = [[UISnapBehavior alloc] initWithItem:hexText snapToPoint:self.view.center];
     snap.damping = 0.2;
     [animator addBehavior:snap];
-    
+
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerTick:) userInfo:nil repeats:YES];
     [self timerTick:timer];
     
-    [self performSelector:@selector(moveUp) withObject:nil afterDelay:3.0];
+//    [self performSelector:@selector(moveUp) withObject:nil afterDelay:3.0];
+    
+    UIPanGestureRecognizer *recognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
+    [hexText addGestureRecognizer:recognizer];
+
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
 }
 
 - (void)timerTick:(NSTimer *)timer {
@@ -42,10 +51,10 @@
 - (void)moveUp {
     [UIView animateWithDuration:2.0
                           delay:0.0
-                        options: UIViewAnimationOptionCurveEaseInOut
+                        options: UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionAllowUserInteraction
                      animations:^{
                          CGRect frame = hexText.frame;
-                         frame.origin.y -= 10.0;
+                         frame.origin.y -= 15.0;
                          hexText.frame = frame;
                      } completion:^(BOOL finished) {
                          [self moveDown];
@@ -55,14 +64,35 @@
 - (void)moveDown{
     [UIView animateWithDuration:2.0
                           delay:0.0
-                        options: UIViewAnimationOptionCurveEaseInOut
+                        options: UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionAllowUserInteraction
                      animations:^{
                          CGRect frame = hexText.frame;
-                         frame.origin.y += 10.0;
+                         frame.origin.y += 15.0;
                          hexText.frame = frame;
                      } completion:^(BOOL finished) {
                          [self moveUp];
                      }];
+}
+
+- (IBAction)handlePan:(UIPanGestureRecognizer *)recognizer {
+    [self.view.layer removeAllAnimations];
+    
+    CGPoint translation = [recognizer translationInView:self.view];
+    recognizer.view.center = CGPointMake(recognizer.view.center.x + translation.x,
+                                         recognizer.view.center.y + translation.y);
+    [recognizer setTranslation:CGPointMake(0, 0) inView:self.view];
+    
+    if (recognizer.state == UIGestureRecognizerStateEnded) {
+        [UIView animateWithDuration:0.7
+                              delay:0.0
+             usingSpringWithDamping:0.3
+              initialSpringVelocity:0.0
+                            options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionAllowUserInteraction
+                         animations:^() {
+                             recognizer.view.center = self.view.center;
+                         }
+                         completion:nil];
+    }
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle{

@@ -12,4 +12,6 @@
 @property (weak, nonatomic) IBOutlet UITextView *hexText;
 @property (nonatomic) UIDynamicAnimator *animator;
 
+- (IBAction)handlePan:(UIPanGestureRecognizer *)recognizer;
+
 @end
