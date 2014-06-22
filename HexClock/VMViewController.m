@@ -8,7 +8,6 @@
 
 #import "VMViewController.h"
 #import "UIColor+Expanded.h"
-#import <QuartzCore/QuartzCore.h>
 
 @implementation VMViewController
 
@@ -34,6 +33,7 @@
     
     UIPanGestureRecognizer *recognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     [hexText addGestureRecognizer:recognizer];
+    hexText.userInteractionEnabled = YES;
 
 }
 
@@ -51,8 +51,7 @@
     hexText.text = hexString;
 }
 
-- (IBAction)handlePan:(UIPanGestureRecognizer *)recognizer {
-    [self.view.layer removeAllAnimations];
+- (void)handlePan:(UIPanGestureRecognizer *)recognizer {
     
     CGPoint translation = [recognizer translationInView:self.view];
     recognizer.view.center = CGPointMake(recognizer.view.center.x + translation.x,

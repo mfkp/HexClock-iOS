@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface VMViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITextView *hexText;
+@property (weak, nonatomic) IBOutlet UILabel *hexText;
 @property (nonatomic) UIDynamicAnimator *animator;
 
 - (IBAction)handlePan:(UIPanGestureRecognizer *)recognizer;

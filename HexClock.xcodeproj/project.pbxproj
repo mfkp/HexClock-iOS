@@ -23,7 +23,6 @@
 		27FD00CB195412B700EC9595 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27FD00C9195412B700EC9595 /* InfoPlist.strings */; };
 		27FD00CD195412B700EC9595 /* HexClockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FD00CC195412B700EC9595 /* HexClockTests.m */; };
 		27FD00DB1954184300EC9595 /* UIColor+Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FD00DA1954184300EC9595 /* UIColor+Expanded.m */; };
-		3E25E7C31954F4800015FF8E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E25E7C21954F4800015FF8E /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +66,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E25E7C31954F4800015FF8E /* QuartzCore.framework in Frameworks */,
 				27FD00A1195412B700EC9595 /* CoreGraphics.framework in Frameworks */,
 				27FD00A3195412B700EC9595 /* UIKit.framework in Frameworks */,
 				27FD009F195412B700EC9595 /* Foundation.framework in Frameworks */,
