@@ -10,7 +10,7 @@
 
 @interface VMViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *hexText;
-@property (nonatomic) UIDynamicAnimator *animator;
+@property (nonatomic) NSDateFormatter *outputFormatter;
 
 - (IBAction)handlePan:(UIPanGestureRecognizer *)recognizer;
 

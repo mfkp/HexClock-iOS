@@ -11,12 +11,19 @@
 
 @implementation VMViewController
 
-@synthesize hexText, animator;
+@synthesize hexText, outputFormatter;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    outputFormatter = [[NSDateFormatter alloc] init];
+    [outputFormatter setDateFormat:@"HHmmss"];
+    
+    UIPanGestureRecognizer *recognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
+    [hexText addGestureRecognizer:recognizer];
+    hexText.userInteractionEnabled = YES;
     
     [UIView animateWithDuration:1.0
                           delay:0.0
@@ -30,24 +37,14 @@
 
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerTick:) userInfo:nil repeats:YES];
     [self timerTick:timer];
-    
-    UIPanGestureRecognizer *recognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
-    [hexText addGestureRecognizer:recognizer];
-    hexText.userInteractionEnabled = YES;
 
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
 }
 
 - (void)timerTick:(NSTimer *)timer {
     NSDate *now = [NSDate date];
-    NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
-    [outputFormatter setDateFormat:@"HHmmss"];
     NSString *newDateString = [outputFormatter stringFromDate:now];
     NSString *hexString = [@"#" stringByAppendingString:newDateString];
-    [self.view setBackgroundColor:[UIColor colorWithHexString:hexString]];
+    self.view.backgroundColor = [UIColor colorWithHexString:hexString];
     hexText.text = hexString;
 }
 
