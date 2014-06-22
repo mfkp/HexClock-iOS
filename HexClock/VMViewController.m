@@ -31,7 +31,7 @@
           initialSpringVelocity:0.0
                         options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionAllowUserInteraction
                      animations:^() {
-                         hexText.center = self.view.center;
+                         hexText.center = [self getRotatedCenter];
                      }
                      completion:nil];
 
@@ -62,10 +62,19 @@
               initialSpringVelocity:0.0
                             options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionAllowUserInteraction
                          animations:^() {
-                             recognizer.view.center = self.view.center;
+                             recognizer.view.center = [self getRotatedCenter];
                          }
                          completion:nil];
     }
+}
+
+- (CGPoint)getRotatedCenter {
+    CGRect screen = [[UIScreen mainScreen] bounds];
+    float pos_y, pos_x;
+    pos_y = UIDeviceOrientationIsLandscape([[UIDevice currentDevice] orientation]) ? screen.size.width/2  : screen.size.height/2;
+    pos_x = UIDeviceOrientationIsLandscape([[UIDevice currentDevice] orientation]) ? screen.size.height/2 : screen.size.width/2;
+    
+    return CGPointMake(pos_x, pos_y);
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle{
